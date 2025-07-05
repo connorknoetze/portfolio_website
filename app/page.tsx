@@ -136,7 +136,7 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-6 pb-0 gap-0 sm:p-0 font-[family-name:var(--font-geist-sans)] bg-gradient-to-bl from-tuna via-gondola to-diesel ">
       <div className="row-start-2 w-full flex min-h-screen items-center">
         {/* Vertical Navigation Menu */}
-        <nav className="flex flex-col gap-10 border-r-3 border-t-3 border-b-3 border-cocoa_bean min-w-[60px] items-left h-auto fixed top-1/2 left-0 -translate-y-1/2 z-20 bg-gray-600 dark:bg-licorice shadow-lg rounded-r-xl pt-5 pb-5 pl-5 pr-1 justify-center">
+        <nav className="flex flex-col gap-10 border-r-3 border-t-3 border-b-3 border-cocoa_bean min-w-[60px] items-left h-auto fixed top-1/2 left-0 -translate-y-1/2 z-20 bg-licorice shadow-lg rounded-r-xl pt-5 pb-5 pl-5 pr-1 justify-center">
           {[
             { href: "/", icon: "/home.png", alt: "Home Icon", label: "| Home" },
             {
@@ -288,6 +288,10 @@ export default function Home() {
                 <div className="flex flex-[0.5] w-full items-center justify-center min-w-70 ml-10 max-w-[600px]"></div> 
               </div>
               <div className="flex items-center justify-center w-full h-full ">
+                <div
+                className={`flex-1 max-w-[30vw]
+                  ${visible ? "translate-x-0 opacity-100" : "-translate-x-32 opacity-0"} hidden 2xl:flex`}
+                ></div>
                 <div
                   className={`flex-[1] flex items-center justify-center max-w-[600px] mr-50 ml-10 mb-20 h-full transition-all duration-700 ease-linear relative
                     ${visible ? "translate-x-0 opacity-100" : "-translate-x-32 opacity-0"} hidden sm:flex`}
